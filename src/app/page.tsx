@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { Compass, Volume2, MapPin, BookOpen, CheckSquare, Brain, Search, CalendarDays } from 'lucide-react';
+import { Compass, Volume2, MapPin, BookOpen, CheckSquare, Brain, Search, CalendarDays, Globe } from 'lucide-react';
 import { loadAllSpecies } from '@/lib/loadSpecies';
 import { inMemphisNow, currentMonth1Based, getCounts } from '@/lib/queries';
 import { MONTH_NAMES } from '@/lib/types';
@@ -47,6 +47,12 @@ const EXPLORE_TILES = [
     label: 'Spots',
     icon: MapPin,
     gradient: 'from-emerald-500/20 to-emerald-600/5',
+  },
+  {
+    href: '/migrations',
+    label: 'Where They Go',
+    icon: Globe,
+    gradient: 'from-violet-500/20 to-violet-600/5',
   },
   {
     href: '/stories',
