@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Compass, Volume2, MapPin, BookOpen, CheckSquare, Brain, Search, CalendarDays, Plane, Globe } from 'lucide-react';
+import { Home, Compass, Volume2, MapPin, BookOpen, CheckSquare, Brain, Search, CalendarDays, Plane, Globe, Laugh } from 'lucide-react';
 
 const NAV_ITEMS = [
   { href: '/here-now', label: 'Here Now', icon: Compass },
@@ -14,6 +14,7 @@ const NAV_ITEMS = [
   { href: '/spots', label: 'Spots', icon: MapPin },
   { href: '/migrations', label: 'Where They Go', icon: Globe },
   { href: '/trips', label: 'TN Trips', icon: Plane },
+  { href: '/funny', label: 'Reddit', icon: Laugh },
   { href: '/stories', label: 'Stories', icon: BookOpen },
   { href: '/quiz', label: 'Quiz', icon: Brain },
   { href: '/lifelist', label: 'My List', icon: CheckSquare },

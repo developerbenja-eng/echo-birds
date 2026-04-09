@@ -23,6 +23,7 @@ import { MigrationMap } from '@/components/MigrationMap';
 import { AudioCredit } from '@/components/AudioCredit';
 import { getMigrationFor } from '@/lib/migration';
 import { getConservationFor, CONSERVATION_LABELS } from '@/lib/conservation';
+import { RedditPostsCompact } from '@/components/RedditPosts';
 
 export async function generateStaticParams() {
   return loadAllSpecies().map((s) => ({ slug: s.slug }));
@@ -295,6 +296,10 @@ export default async function SpeciesPage({
           )}
 
           <LifelistToggle speciesId={species.id} commonName={species.commonName} />
+
+          <Panel title="Reddit says...">
+            <RedditPostsCompact birdName={species.commonName} limit={4} />
+          </Panel>
 
           <RecentSightings
             region="US-TN-157"
